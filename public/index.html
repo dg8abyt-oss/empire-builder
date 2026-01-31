@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empire Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Empire Builder</h1>
+            <div id="stats">
+                <h2 id="money-display">$0.00</h2>
+                <p id="cps-display">per second: $0.00</p>
+            </div>
+            <div class="controls">
+                <button id="save-btn" onclick="saveGame()">Save Game</button>
+                <button id="reset-btn" onclick="hardReset()">Hard Reset</button>
+                <button id="api-btn" onclick="claimDailyBonus()">Claim Server Bonus</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="click-zone">
+                <button id="clicker-btn" onclick="manualClick()">
+                    MAKE MONEY
+                    <span id="click-val">+$1</span>
+                </button>
+                
+                <div class="prestige-section" id="prestige-container" style="display:none;">
+                    <h3>Prestige</h3>
+                    <p>Reset progress to gain Knowledge (Global Multiplier)</p>
+                    <button onclick="prestige()" class="prestige-btn">Ascend</button>
+                    <p id="prestige-bonus">Current Bonus: 0%</p>
+                </div>
+            </section>
+
+            <section class="business-zone">
+                <h3>Income Streams</h3>
+                <div id="business-list">
+                    </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
